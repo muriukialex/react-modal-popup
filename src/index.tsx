@@ -1,6 +1,6 @@
 import './styles.css'
 import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
+import { createPortal } from 'react-dom'
 
 interface ModalProps {
 	onClose: () => void
@@ -84,7 +84,7 @@ const Modal = ({
 		...customContentStyles,
 	}
 
-	return ReactDOM.createPortal(
+	return createPortal(
 		<div style={containerStyles} onClick={onClose}>
 			<div style={contentStyles}>
 				{children}
