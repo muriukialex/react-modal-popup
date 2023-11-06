@@ -1,7 +1,8 @@
 {
 	"name": "@muriukialex/react-modal-popup",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "A package to create modal pop ups for a React application",
+	"main": "src/index.tsx",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
@@ -25,7 +26,7 @@
 		"url": "https://github.com/muriukialex/react-modal-popup/issues"
 	},
 	"homepage": "https://github.com/muriukialex/react-modal-popup#readme",
-	"dependencies": {
+	"peerDependencies": {
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
