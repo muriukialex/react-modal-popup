@@ -26,12 +26,12 @@ const YourComponent = () => {
 
 	return (
 		<Modal
-			onClose={handleCloseModal}
-			customContainerStyles={/* Your custom styles */}
-            customContentStyles={/* Your custom styles */}
-            customModalButtonStyles={/* Your custom styles */}
+		  onClose={handleCloseModal}
+		  customContainerStyles={/* Your custom styles */}
+                  customContentStyles={/* Your custom styles */}
+                  customModalButtonStyles={/* Your custom styles */}
 		>
-			{/* Your content goes here */}
+		{/* Your content goes here */}
 		</Modal>
 	)
 }
@@ -53,32 +53,24 @@ The `Modal` component accepts the following props:
 ```javascript
 import Modal from '@muriukialex/react-modal-popup'
 
-const YourComponent = () => {
+const App = () => {
+	const [showModal, setShowModal] = useState(false);
+
 	const handleCloseModal = () => {
-		// Handle modal close action
-	}
+		setShowModal(false);
+	};
+
+	const handleShowModal = () => {
+		setShowModal(true);
+	};
 
 	return (
-		<Modal
-			onClose={handleCloseModal}
-			customContainerStyles={{
-				backgroundColor: 'rgba(0, 0, 0, 0.3)',
-				transition: 'background-color 0.3s',
-			}}
-			customContentStyles={{
-				background: '#fff',
-				borderRadius: '2px',
-				// Add your custom styles here
-			}}
-			customModalButtonStyles={
-				{
-					// Add your custom styles here
-				}
-			}
-			delay={5000} // Auto-close the modal after 5 seconds
-		>
-			{/* Your content goes here */}
-		</Modal>
+		<div className="App">
+			<h1>React Pop up Modal Example</h1>
+			<button onClick={handleShowModal}>Show Modal</button>
+
+			{showModal ? <Modal onClose={handleCloseModal}>Some message</Modal> : null}
+		</div>
 	)
 }
 ```
