@@ -49,6 +49,8 @@ const Modal = ({
 				modalRoot.remove()
 			}
 		}
+	// Disable the eslint rule for the following line
+	// eslint-disable-next-line react-hooks/exhaustive-deps	
 	}, [])
 
 	if (root === null) return null
