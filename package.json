@@ -1,0 +1,32 @@
+{
+	"name": "@muriukialex/react-modal-popup",
+	"version": "1.0.0",
+	"description": "A package to create modal pop ups for a React application",
+	"main": "src/index.tsx",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/muriukialex/react-modal-popup.git"
+	},
+	"keywords": [
+		"react",
+		"react-modal-popup",
+		"react-hooks",
+		"react-components",
+		"react-custom-modals"
+	],
+	"author": "muriukialex",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/muriukialex/react-modal-popup/issues"
+	},
+	"homepage": "https://github.com/muriukialex/react-modal-popup#readme",
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.36",
+		"@types/react-dom": "^18.2.14"
+	}
+}
