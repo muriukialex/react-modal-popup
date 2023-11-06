@@ -1,6 +1,6 @@
 {
 	"name": "@muriukialex/react-modal-popup",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A package to create modal pop ups for a React application",
 	"main": "src/index.tsx",
 	"types": "types/index.d.ts",
