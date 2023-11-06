@@ -1,8 +1,8 @@
+import './styles.css'
 import { useState } from 'react'
-import './App.css'
 import Modal from '@muriukialex/react-modal-popup'
 
-function App() {
+export default function App() {
 	const [showModal, setShowModal] = useState(false)
 
 	const handleCloseModal = () => {
@@ -15,13 +15,10 @@ function App() {
 
 	return (
 		<div className='App'>
-			<h1>Hello CodeSandbox</h1>
-			<h2>Start editing to see some magic happen!</h2>
+			<h1>React Pop up Modal Example</h1>
 			<button onClick={handleShowModal}>Show Modal</button>
 
-			{showModal ? <Modal onClose={handleCloseModal}>message</Modal> : null}
+			{showModal ? <Modal onClose={handleCloseModal}>Some message</Modal> : null}
 		</div>
 	)
 }
-
-export default App
