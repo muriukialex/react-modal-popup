@@ -1,6 +1,6 @@
 {
 	"name": "@muriukialex/react-modal-popup",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "A package to create modal pop ups for a React application",
 	"main": "src/index.tsx",
 	"scripts": {
@@ -26,11 +26,9 @@
 		"url": "https://github.com/muriukialex/react-modal-popup/issues"
 	},
 	"homepage": "https://github.com/muriukialex/react-modal-popup#readme",
-	"peerDependencies": {
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
 	"devDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
