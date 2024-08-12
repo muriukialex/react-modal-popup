@@ -1,44 +1,77 @@
 {
-	"name": "@muriukialex/react-modal-popup",
-	"version": "1.0.8",
-	"description": "A package to create modal pop ups for a React application",
-	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
-	"types": "dist/types.d.ts",
-	"scripts": {
-		"build": "rollup -c --bundleConfigAsCjs"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/muriukialex/react-modal-popup.git"
-	},
-	"keywords": [
-		"react",
-		"react-modal-popup",
-		"react-hooks",
-		"react-components",
-		"react-custom-modals"
-	],
-	"author": "muriukialex",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/muriukialex/react-modal-popup/issues"
-	},
-	"homepage": "https://github.com/muriukialex/react-modal-popup#readme",
-	"dependencies": {
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
-	"devDependencies": {
-		"@rollup/plugin-commonjs": "^25.0.7",
-		"@rollup/plugin-node-resolve": "^15.2.3",
-		"@rollup/plugin-typescript": "^11.1.5",
-		"@types/react": "^18.2.15",
-		"@types/react-dom": "^18.2.7",
-		"rollup": "^4.3.0",
-		"rollup-plugin-dts": "^6.1.0",
-		"rollup-plugin-peer-deps-external": "^2.2.4",
-		"rollup-plugin-terser": "^7.0.2",
-		"typescript": "^5.0.2"
-	}
+  "version": "1.0.9",
+  "description": "A package to create modal pop ups for a React application",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muriukialex/react-modal-popup.git"
+  },
+  "keywords": [
+    "react",
+    "react-modal-popup",
+    "react-hooks",
+    "react-components",
+    "react-custom-modals"
+  ],
+  "bugs": {
+    "url": "https://github.com/muriukialex/react-modal-popup/issues"
+  },
+  "homepage": "https://github.com/muriukialex/react-modal-popup#readme",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@muriukialex/react-modal-popup",
+  "author": "muriukialex",
+  "module": "dist/react-modal-popup.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-modal-popup.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-modal-popup.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "husky": "^9.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "size-limit": "^11.1.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  }
 }

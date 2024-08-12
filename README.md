@@ -17,62 +17,66 @@ yarn add @muriukialex/react-modal-popup
 Here's how you can use the `Modal` component in your React application:
 
 ```javascript
-import Modal from '@muriukialex/react-modal-popup'
+import Modal from '@muriukialex/react-modal-popup';
 
 const YourComponent = () => {
-	const handleCloseModal = () => {
-		// Handle modal close action
-	}
+  const handleCloseModal = () => {
+    // Handle modal close action
+  };
 
-	return (
-		<Modal
-		  onClose={handleCloseModal}
-		  customContainerStyles={/* Your custom styles */}
-                  customContentStyles={/* Your custom styles */}
-                  customModalButtonStyles={/* Your custom styles */}
-		>
-		{/* Your content goes here */}
-		</Modal>
-	)
-}
+  return (
+    <Modal
+      title={'Title'} {/* Add the modal title */}
+	  showModal={showModal} {/* Pass the boolean property to display the modal */}
+      onClose={handleCloseModal}
+      customContainerStyles={/* Your custom styles */}
+      customContentStyles={/* Your custom styles */}
+      customModalButtonStyles={/* Your custom styles */}
+    >
+      {/* Your content goes here */}
+    </Modal>
+  );
+};
 ```
 
 ### Props
 
 The `Modal` component accepts the following props:
 
--   `onClose`: A callback function to handle the modal close action.
--   `children`: The content you want to display within the modal. (optional)
--   `customContainerStyles`: Custom styles for the modal container. (optional)
--   `customContentStyles`: Custom styles for the modal content. (optional)
--   `customModalButtonStyles`: Custom styles for the modal's close button. (optional)
--   `delay`: The time (in milliseconds) after which the modal automatically closes(default: 10000ms). (optional)
+- `onClose`: A callback function to handle the modal close action.
+- `showModal`: Boolean property to conditionally display the modal.
+- `children`: The content you want to display within the modal. (optional)
+- `customContainerStyles`: Custom styles for the modal container. (optional)
+- `customContentStyles`: Custom styles for the modal content. (optional)
+- `customModalButtonStyles`: Custom styles for the modal's close button. (optional)
 
 ## Example
 
 ```javascript
-import Modal from '@muriukialex/react-modal-popup'
+import Modal from '@muriukialex/react-modal-popup';
 
 const App = () => {
-	const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-	const handleCloseModal = () => {
-		setShowModal(false);
-	};
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
-	const handleShowModal = () => {
-		setShowModal(true);
-	};
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
 
-	return (
-		<div className="App">
-			<h1>React Pop up Modal Example</h1>
-			<button onClick={handleShowModal}>Show Modal</button>
+  return (
+    <div className="App">
+      <h1>React Pop up Modal Example</h1>
+      <button onClick={handleShowModal}>Show Modal</button>
 
-			{showModal ? <Modal onClose={handleCloseModal}>Some message</Modal> : null}
-		</div>
-	)
-}
+      <Modal title={'Title'} showModal={showModal} onClose={handleCloseModal}>
+        Some message
+      </Modal>
+    </div>
+  );
+};
 ```
 
 ## License
